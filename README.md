@@ -1,5 +1,9 @@
 # Photo Shoot Planner
 
+<p align="center">
+  <img src="assets/mascot/photo-scout.png" alt="Photo Shoot Planner mascot: a pixel-art photo scout bird carrying a camera and shoot plan" width="280">
+</p>
+
 A Claude-compatible MCP server and skill suite for both photography trips and professional photoshoot productions.
 
 ## Two planning modes
