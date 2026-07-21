@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/anthropics/mcpb/main/schemas/mcpb-manifest-v0.4.schema.json",
+  "manifest_version": "0.4",
+  "name": "photo-shoot-planner",
+  "display_name": "Photo Shoot Planner",
+  "version": "0.1.0",
+  "description": "Plan landscape, moon, Milky Way, and dark-sky photography trips.",
+  "long_description": "Evaluates astronomy and weather, compares viewpoints, estimates dark-sky quality, recommends camera settings, finds routes and lodging, and produces field-ready shooting plans.",
+  "author": { "name": "Local Photography Tools" },
+  "license": "MIT",
+  "server": {
+    "type": "node",
+    "entry_point": "dist/index.js",
+    "mcp_config": { "command": "node", "args": ["${__dirname}/dist/index.js"] }
+  },
+  "tools_generated": true,
+  "prompts_generated": true,
+  "compatibility": { "claude_desktop": ">=0.10.0", "platforms": ["darwin", "win32", "linux"] }
+}
