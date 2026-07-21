@@ -1,0 +1,4 @@
+interface:
+  display_name: "Photoshoot Budget Manager"
+  short_description: "Estimate and track production costs"
+  default_prompt: "Use $manage-shoot-budget to build and validate my photoshoot budget."

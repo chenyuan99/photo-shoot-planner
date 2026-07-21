@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wardrobe and Props Manager"
+  short_description: "Track looks, props, continuity, and returns"
+  default_prompt: "Use $manage-wardrobe-props to organize wardrobe and props by setup and shot."

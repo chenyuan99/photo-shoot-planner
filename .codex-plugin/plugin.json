@@ -1,5 +1,29 @@
 {
   "name": "photo-shoot-planner",
-  "version": "0.1.0",
-  "description": "Photography trip planning MCP tools compatible with Claude and Codex."
+  "version": "0.2.0",
+  "description": "Skill-based photography trip and production planning MCP tools compatible with Claude and Codex.",
+  "author": {
+    "name": "chenyuan99",
+    "url": "https://github.com/chenyuan99"
+  },
+  "repository": "https://github.com/chenyuan99/photo-shoot-planner",
+  "license": "MIT",
+  "keywords": ["photography", "production", "astrophotography", "call-sheet", "shot-list"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Photo Shoot Planner",
+    "shortDescription": "Plan photography trips and productions",
+    "longDescription": "Coordinate creative briefs, locations, shots, crews, budgets, equipment, call sheets, permissions, weather, and astronomy.",
+    "developerName": "chenyuan99",
+    "category": "Productivity",
+    "capabilities": ["Planning", "Analysis", "Document Generation"],
+    "websiteURL": "https://github.com/chenyuan99/photo-shoot-planner",
+    "defaultPrompt": [
+      "Plan a complete professional photoshoot.",
+      "Create a shot list and call sheet.",
+      "Compare locations for an astrophotography trip."
+    ],
+    "brandColor": "#243447"
+  }
 }

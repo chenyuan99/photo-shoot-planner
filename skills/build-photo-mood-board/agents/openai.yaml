@@ -1,0 +1,4 @@
+interface:
+  display_name: "Photo Mood Board Planner"
+  short_description: "Translate concepts into visual direction"
+  default_prompt: "Use $build-photo-mood-board to plan a focused visual treatment for my shoot."

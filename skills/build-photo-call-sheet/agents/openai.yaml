@@ -1,0 +1,4 @@
+interface:
+  display_name: "Photo Call Sheet Builder"
+  short_description: "Create a conflict-checked production schedule"
+  default_prompt: "Use $build-photo-call-sheet to create a field-ready call sheet for my shoot."

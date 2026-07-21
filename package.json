@@ -1,9 +1,9 @@
 {
   "name": "photo-shoot-planner",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "Claude-compatible MCP photography trip planner",
+  "description": "Claude-compatible MCP photography trip and production planner",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "start": "node dist/index.js",

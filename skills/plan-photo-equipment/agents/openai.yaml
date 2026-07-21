@@ -1,0 +1,4 @@
+interface:
+  display_name: "Photo Equipment Planner"
+  short_description: "Match gear and backups to every setup"
+  default_prompt: "Use $plan-photo-equipment to create the equipment and rental plan for my shoot."

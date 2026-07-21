@@ -1,0 +1,4 @@
+interface:
+  display_name: "Creative Brief Builder"
+  short_description: "Define shoot goals, deliverables, and direction"
+  default_prompt: "Use $develop-creative-brief to turn my shoot idea into an executable creative brief."

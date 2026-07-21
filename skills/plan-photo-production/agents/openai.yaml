@@ -1,0 +1,4 @@
+interface:
+  display_name: "Photo Production Planner"
+  short_description: "Coordinate complete professional photoshoots"
+  default_prompt: "Use $plan-photo-production to create a complete production book for my photoshoot."

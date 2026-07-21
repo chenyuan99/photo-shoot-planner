@@ -3,9 +3,9 @@
   "manifest_version": "0.4",
   "name": "photo-shoot-planner",
   "display_name": "Photo Shoot Planner",
-  "version": "0.1.0",
-  "description": "Plan landscape, moon, Milky Way, and dark-sky photography trips.",
-  "long_description": "Evaluates astronomy and weather, compares viewpoints, estimates dark-sky quality, recommends camera settings, finds routes and lodging, and produces field-ready shooting plans.",
+  "version": "0.2.0",
+  "description": "Plan photography trips and professional photoshoot productions.",
+  "long_description": "Combines astronomy, weather and location planning with creative briefs, mood boards, shot lists, crews, budgets, equipment, wardrobe, releases, call sheets and readiness checks.",
   "author": { "name": "Local Photography Tools" },
   "license": "MIT",
   "server": {

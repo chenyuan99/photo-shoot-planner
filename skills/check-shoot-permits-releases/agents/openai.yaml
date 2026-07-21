@@ -1,0 +1,4 @@
+interface:
+  display_name: "Permits and Releases Checker"
+  short_description: "Track shoot permissions and usage rights"
+  default_prompt: "Use $check-shoot-permits-releases to build a legal-readiness checklist for my shoot."

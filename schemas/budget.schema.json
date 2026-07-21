@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Photoshoot Budget",
+  "type": "object",
+  "required": ["currency", "lines"],
+  "properties": {
+    "currency": { "type": "string", "minLength": 3, "maxLength": 3 },
+    "taxRatePercent": { "type": "number", "minimum": 0 }, "contingencyPercent": { "type": "number", "minimum": 0 }, "budgetCap": { "type": "number", "minimum": 0 },
+    "lines": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["category", "description", "quantity", "unitCost", "status"], "properties": { "category": { "type": "string" }, "description": { "type": "string" }, "quantity": { "type": "number", "exclusiveMinimum": 0 }, "unitCost": { "type": "number", "minimum": 0 }, "status": { "enum": ["estimated", "committed", "actual"] }, "actualCost": { "type": "number", "minimum": 0 }, "owner": { "type": "string" }, "source": { "type": "string" } } } }
+  }
+}

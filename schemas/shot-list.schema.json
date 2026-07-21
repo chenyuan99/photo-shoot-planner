@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Photography Shot List",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "deliverable", "priority", "setup", "description", "estimatedMinutes"],
+    "properties": {
+      "id": { "type": "string" }, "deliverable": { "type": "string" }, "priority": { "enum": ["must", "should", "nice"] },
+      "setup": { "type": "string" }, "description": { "type": "string" }, "talent": { "type": "array", "items": { "type": "string" } },
+      "wardrobeLook": { "type": "string" }, "props": { "type": "array", "items": { "type": "string" } }, "orientation": { "type": "string" },
+      "aspectRatio": { "type": "string" }, "lensPerspective": { "type": "string" }, "lighting": { "type": "string" },
+      "estimatedMinutes": { "type": "integer", "minimum": 1 }, "status": { "enum": ["planned", "ready", "captured", "approved", "dropped"] }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Photo Location Scout"
+  short_description: "Evaluate locations, light, access, and risk"
+  default_prompt: "Use $scout-photo-location to compare locations for my planned shoot."

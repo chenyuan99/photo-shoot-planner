@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Photography Creative Brief",
+  "type": "object",
+  "required": ["project", "objective", "audience", "deliverables", "visualDirection", "approver"],
+  "properties": {
+    "project": { "type": "string" },
+    "objective": { "type": "string" },
+    "audience": { "type": "string" },
+    "keyMessage": { "type": "string" },
+    "deliverables": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["name", "quantity", "channel"], "properties": { "name": { "type": "string" }, "quantity": { "type": "integer", "minimum": 1 }, "channel": { "type": "string" }, "orientation": { "type": "string" }, "aspectRatio": { "type": "string" }, "deadline": { "type": "string" } } } },
+    "visualDirection": { "type": "object" },
+    "usage": { "type": "object" },
+    "constraints": { "type": "array", "items": { "type": "string" } },
+    "approver": { "type": "string" },
+    "openDecisions": { "type": "array", "items": { "type": "string" } }
+  }
+}

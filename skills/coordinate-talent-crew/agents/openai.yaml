@@ -1,0 +1,4 @@
+interface:
+  display_name: "Talent and Crew Coordinator"
+  short_description: "Plan roles, bookings, and production logistics"
+  default_prompt: "Use $coordinate-talent-crew to build the staffing and booking plan for my shoot."

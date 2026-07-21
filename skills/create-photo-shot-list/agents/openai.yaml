@@ -1,0 +1,4 @@
+interface:
+  display_name: "Photo Shot List Builder"
+  short_description: "Map deliverables to efficient shot coverage"
+  default_prompt: "Use $create-photo-shot-list to build a prioritized shot list from my brief."
