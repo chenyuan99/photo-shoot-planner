@@ -61,19 +61,58 @@ The skills follow the modular pattern used by AI job-search collections: one coo
 | `validate_shoot_readiness` | Separate production blockers from warnings |
 | `create_shooting_plan` | Produce a printable outdoor field plan |
 
-## Run locally
+## Install
 
-Requires Node.js 20 or newer.
+Requires Node.js 20 or newer. First clone and build the project:
 
 ```bash
-npm install
+git clone https://github.com/chenyuan99/photo-shoot-planner.git
+cd photo-shoot-planner
+npm ci
+npm run build
+```
+
+### Install the skills in Codex
+
+Codex discovers personal skills in `~/.agents/skills`. Copying the skill folders there makes them available in every workspace.
+
+macOS or Linux:
+
+```bash
+mkdir -p ~/.agents/skills
+cp -R skills/. ~/.agents/skills/
+```
+
+Windows PowerShell:
+
+```powershell
+New-Item -ItemType Directory -Force "$HOME/.agents/skills"
+Copy-Item -Recurse -Force "skills/*" "$HOME/.agents/skills/"
+```
+
+For project-only installation, copy the folders to `.agents/skills/` inside the target repository instead. Codex detects skill changes automatically; restart Codex if the new skills do not appear.
+
+The skills can provide instruction-only planning after this step. Configure the MCP server below if you also want live location, weather, astronomy, routing, budget, call-sheet, and readiness tools.
+
+### Configure the MCP server
+
+Run the server locally to verify the build:
+
+```bash
 npm test
 npm start
 ```
 
-### Claude Desktop developer configuration
+To register the local server with Codex, replace the example path with the absolute path to this checkout:
 
-Build with `npm run build`, then configure the absolute server path:
+```bash
+codex mcp add photo-shoot-planner -- node /absolute/path/photo-shoot-planner/dist/index.js
+codex mcp list
+```
+
+The ChatGPT desktop app, Codex CLI, and IDE extension share the Codex MCP configuration. Restart the active client after adding the server, then use `/mcp` to confirm it is connected.
+
+For Claude Desktop development, configure the same absolute server path:
 
 ```json
 {
@@ -86,10 +125,37 @@ Build with `npm run build`, then configure the absolute server path:
 }
 ```
 
-Try either:
+## Use the skills
 
-- “Compare Sequoia and Death Valley for Milky Way photography next weekend with a Nikon Z30.”
-- “Plan a six-person editorial fashion shoot and produce the brief, shot list, budget, call sheet, and readiness report.”
+In Codex, run `/skills` or type `$` in the prompt to browse installed skills. You can invoke a skill explicitly or describe the task naturally and let Codex choose the matching skill.
+
+Use the coordinating skill for a complete professional production:
+
+```text
+$plan-photo-production Plan a six-person editorial fashion shoot in Brooklyn on
+September 18. The budget cap is $12,000. Produce the brief, shot list, crew plan,
+budget, equipment list, call sheet, release checklist, and readiness report.
+```
+
+Invoke a specialist when you need one focused deliverable:
+
+```text
+$build-photo-call-sheet Create a call sheet for a product shoot from 8:00 AM to
+6:00 PM, with two studio setups, a 45-minute lunch, and a 30-minute strike.
+```
+
+```text
+$scout-photo-location Compare three locations for a golden-hour portrait shoot.
+Evaluate creative fit, access, permits, weather risk, and a backup option.
+```
+
+Natural-language requests work too:
+
+- "Compare Sequoia and Death Valley for Milky Way photography next weekend with a Nikon Z30."
+- "Build a budget and equipment plan for a two-day commercial product shoot."
+- "Audit this call sheet for timing conflicts, missing breaks, and readiness blockers."
+
+For stronger results, include the shoot type, objective, date, location, deliverables, team size, budget, equipment constraints, usage rights, deadlines, and known safety or accessibility needs. Missing noncritical details can remain `TBD` with an owner and due date.
 
 ## Package as a Claude extension
 
@@ -100,7 +166,7 @@ mcpb validate manifest.json
 mcpb pack
 ```
 
-Install the resulting `.mcpb` from Claude Desktop → Settings → Extensions → Advanced settings → Install Extension.
+Install the resulting `.mcpb` from Claude Desktop -> Settings -> Extensions -> Advanced settings -> Install Extension.
 
 ## Data and safety notes
 
